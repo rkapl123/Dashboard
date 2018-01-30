@@ -392,3 +392,15 @@ Exposure for CUST_A:
 Total exposure for CUST_A:
 
 <http://blooming-dawn-94116.herokuapp.com/api/totalexposure-tree/counterparty/CUST_A>
+
+# 5 Alternative build with gradle
+
+The following assumes you cloned the repository into the folder Dashboard-master:
+
+In order to build the dashboard without heroku and use the builtin local webserver, simply state "gradlew installDist" in the topmost folder.
+
+This builds the dashboard webapp in the folder build\install\Dashboard-master. 
+
+The webapp can be started using the start script build\install\Dashboard-master\bin\Dashboard-master.
+
+The vendors folder with the client js and css resources needs to be put into src\main\resources\public before that.
