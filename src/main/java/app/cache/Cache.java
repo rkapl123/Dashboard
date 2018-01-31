@@ -45,7 +45,7 @@ public class Cache implements Serializable {
     // For each rest endpoint, we implement a container holding all possible values for that endpoint.
     // These containers are used to generate a web page containing links to every item in the cache.
     // This functionality is provided only for debugging purposes, it is not used by the client,
-    // which accesses the rest endpoints programatically.
+    // which accesses the rest endpoints programmatically.
     private Set<String> nodeLinks_;
     private Set<String> nodeLinks2_;
     private Set<String> nodeLinks3_;
