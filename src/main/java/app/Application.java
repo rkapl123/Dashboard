@@ -26,6 +26,8 @@ import app.report.LimitTableDao;
 import app.util.DashBoardException;
 import app.util.JsonUtil;
 import app.util.Path;
+import org.apache.velocity.runtime.log.Log;
+import spark.servlet.SparkApplication;
 
 import static spark.Spark.*;
 
@@ -63,6 +65,9 @@ public class Application {
         port(getHerokuAssignedPort());
 
         staticFileLocation("/public");
+        if (args.length > 0 && args[0] == "localwebserver") {
+            externalStaticFileLocation("./");
+        }
 
         // Set up before-filters (called before each get/post)
 //        before("*", Filters.handleLocaleChange);
